@@ -30,6 +30,8 @@ Target "Build" (fun _ ->
     |> CopyFiles buildDir ;
     !! "src/resources/*.png"
     |> CopyFiles buildDir
+    CopyFile buildDir "launch.sh"
+    CopyFile buildDir "script.sh"
 )
 
 Target "Deploy" (fun _ ->
